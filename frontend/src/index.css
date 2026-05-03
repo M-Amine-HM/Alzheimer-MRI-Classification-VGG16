@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0a0a0f;
+  color: #e8e8ef;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes pulse-brain {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+@keyframes shimmer-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-pulse-brain {
+  animation: pulse-brain 1.6s ease-in-out infinite;
+}
+
+.animate-shimmer-bar {
+  animation: shimmer-bar 1.4s ease-in-out infinite;
+}
+
+.medical-grid-bg {
+  background-image:
+    linear-gradient(rgba(43, 151, 199, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 151, 199, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
